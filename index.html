@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tick</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #f0f0f0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #a {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    #b {
+      display: flex;
+      gap: 1rem;
+    }
+
+    button {
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #2a2a2a;
+    }
+  </style>
+</head>
+<body>
+  <div id="a">0</div>
+  <div id="b">
+    <button id="c">+</button>
+    <button id="d">−</button>
+    <button id="e">reset</button>
+  </div>
+
+  <script>
+    let f = 0
+    const a = document.getElementById('a')
+    const c = document.getElementById('c')
+    const d = document.getElementById('d')
+    const e = document.getElementById('e')
+
+    c.onclick = () => {
+      f++
+      a.textContent = f
+    }
+
+    d.onclick = () => {
+      f--
+      a.textContent = f
+    }
+
+    e.onclick = () => {
+      f = 0
+      a.textContent = f
+    }
+  </script>
+</body>
+</html>
